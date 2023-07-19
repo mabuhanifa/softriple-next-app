@@ -614,15 +614,15 @@
     "product": {
       "name": "Slim Fit Pants",
       "description": "Slim-fit pants in twill. Waistband with concealed hook-and-eye fastener and a zip fly. Side pockets and welt back pockets with button.",
-      "price": "$19.99",
+      "price": "$29.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/Qf8w4T2/hmgoepprod-13.webp",
+        "https://i.ibb.co/W5z4kM9/hmgoepprod-5.jpg",
+        "https://i.ibb.co/vjXfs7T/hmgoepprod-14.webp",
+        "https://i.ibb.co/Zdg1pHx/hmgoepprod-15.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Pants", "Formal"],
+      "colors": ["Black", "Solid", "Dark"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
@@ -635,323 +635,112 @@
   },
   {
     "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
+      "name": "Regular Fit Pants",
+      "description": "Regular Fit Pants in twill. Waistband with concealed hook-and-eye fastener and a zip fly. Side pockets and welt back pockets with button.",
+      "price": "$34.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/MVg4Q4k/hmgoepprod-10.webp",
+        "https://i.ibb.co/L57S4c3/hmgoepprod-71.webp",
+        "https://i.ibb.co/cQhM6N8/hmgoepprod-9.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Pants", "Formal", "Regular"],
+      "colors": ["Black", "Solid", "Dark"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "Kevin Robinson",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "rating": 5,
+        "comment": "Great formal pants! Highly recommended."
       }
     ]
   },
   {
     "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
+      "name": "Cargo Joggers",
+      "description": "Joggers in woven cotton fabric. Waistband with drawstring and covered elastic.",
+      "price": "$39.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/0yqLk1J/hmgoepprod-82.webp",
+        "https://i.ibb.co/RCLp4Wm/hmgoepprod-81.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Pants", "Joggers", "Cargo"],
+      "colors": ["Dark", "Gray", "Solid"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "Eric Clark",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "rating": 4.5,
+        "comment": "Great Joggers! Highly recommended."
       }
     ]
   },
   {
     "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
+      "name": "Skinny Fit Suit Pants",
+      "description": "Skinny-fit suit pants in woven stretch fabric with creased legs. Zip fly with concealed hook-and-eye fastener, side pockets, and welt back pockets.",
+      "price": "$44.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/8m9h8PQ/hmgoepprod-68.webp",
+        "https://i.ibb.co/YP6Rr91/hmgoepprod-67.webp",
+        "https://i.ibb.co/9VSqxGY/hmgoepprod-12.jpg"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Pants", "Checked"],
+      "colors": ["Gray", "White", "Checked"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "Justin Rodriguez",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "rating": 4.5,
+        "comment": "Great Pants! Highly recommended."
       }
     ]
   },
   {
     "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
+      "name": "Skinny Fit Nylon Cargo Joggers",
+      "description": "Skinny-fit joggers in stretch nylon. Drawstring and covered elastic at waistband, mock fly, and covered elastic at hems.",
+      "price": "$49.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/6m5FrkB/hmgoepprod-16.webp",
+        "https://i.ibb.co/qyGH1t2/hmgoepprod-17.webp",
+        "https://i.ibb.co/09C6NKm/hmgoepprod-6.jpg",
+        "https://i.ibb.co/bmKVC6g/hmgoepprod-18.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
-      "sizes": ["Small", "Medium", "Large"]
-    },
-    "reviews": [
-      {
-        "username": "Nathan Lewis",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
-      }
-    ]
-  },
-  {
-    "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
-      "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
-      ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
-      "sizes": ["Small", "Medium", "Large"]
-    },
-    "reviews": [
-      {
-        "username": "Logan Walker",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
-      }
-    ]
-  },
-  {
-    "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
-      "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
-      ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Cargo", "Pants"],
+      "colors": ["Cargo", "Joggers", "Blue", "Solid"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "Brian Hall",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "rating": 5,
+        "comment": "Great Cargo Joggers! Highly recommended."
       }
     ]
   },
   {
     "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
+      "name": "Slim Fit Cotton Chinos",
+      "description": "Slim-fit chinos in stretch cotton twill. Zip fly, side pockets, and welt back pockets with button.",
+      "price": "$34.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/KjVCwDp/hmgoepprod-19.webp",
+        "https://i.ibb.co/Y76VN1h/hmgoepprod-20.webp",
+        "https://i.ibb.co/BPvDj4C/hmgoepprod-22.webp",
+        "https://i.ibb.co/2y8GXjW/hmgoepprod-21.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Pants", "Chinos"],
+      "colors": ["Dark", "Blue", "Solid"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "Adam Allen",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
-      }
-    ]
-  },
-  {
-    "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
-      "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
-      ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
-      "sizes": ["Small", "Medium", "Large"]
-    },
-    "reviews": [
-      {
-        "username": "Aaron Young",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
-      }
-    ]
-  },
-  {
-    "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
-      "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
-      ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
-      "sizes": ["Small", "Medium", "Large"]
-    },
-    "reviews": [
-      {
-        "username": "Kyle",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
-      }
-    ]
-  },
-  {
-    "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
-      "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
-      ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
-      "sizes": ["Small", "Medium", "Large"]
-    },
-    "reviews": [
-      {
-        "username": "Peter Hernandez",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
-      }
-    ]
-  },
-  {
-    "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
-      "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
-      ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
-      "sizes": ["Small", "Medium", "Large"]
-    },
-    "reviews": [
-      {
-        "username": "Travis King",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
-      }
-    ]
-  },
-  {
-    "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
-      "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
-      ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
-      "sizes": ["Small", "Medium", "Large"]
-    },
-    "reviews": [
-      {
-        "username": "Samuel",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
-      }
-    ]
-  },
-  {
-    "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
-      "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
-      ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
-      "sizes": ["Small", "Medium", "Large"]
-    },
-    "reviews": [
-      {
-        "username": "Christopher Wright",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
-      }
-    ]
-  },
-  {
-    "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
-      "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
-      ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
-      "sizes": ["Small", "Medium", "Large"]
-    },
-    "reviews": [
-      {
-        "username": "Matthew Scott",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "rating": 4.5,
+        "comment": "Great Chinos! Highly recommended."
       }
     ]
   }
