@@ -479,40 +479,38 @@
   },
   {
     "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
+      "name": "Relaxed Fit Poplin Shirt",
+      "description": "Relaxed-fit shirt in soft cotton poplin. Turn-down collar, classic button placket, an open chest pocket, and yoke at back with box pleat.",
+      "price": "$26.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/5TZ0T1t/hmgoepprod-12.webp",
+        "https://i.ibb.co/09P5nV2/hmgoepprod-11.webp",
+        "https://i.ibb.co/CmbnDKz/hmgoepprod-13.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Shirt", "Cotton"],
+      "colors": ["Black", "Solid"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "David Martin",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "rating": 4.5,
+        "comment": "Great shirt! Highly recommended."
       }
     ]
   },
   {
     "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
+      "name": "Relaxed Fit Oxford Shirt",
+      "description": "Shirt in oxford cotton. Button-down collar, buttons without placket, and yoke at back. Open chest pocket, long sleeves with button at cuffs, and sleeve placket with link button. ",
+      "price": "$29.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/KLPXRKq/hmgoepprod-98.webp",
+        "https://i.ibb.co/48Q0X3B/hmgoepprod-100.webp",
+        "https://i.ibb.co/Srt5Pkb/hmgoepprod-99.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Shirt", "Cotton"],
+      "colors": ["Khaki ", "Green", "Solid"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
@@ -525,123 +523,97 @@
   },
   {
     "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
+      "name": "Regular Fit Flannel Shirt",
+      "description": "Regular-fit shirt in soft cotton flannel. Turn-down collar, buttons at front, and yoke at back. Open chest pocket, long sleeves, sleeve placket with link button, and button at cuffs. ",
+      "price": "$31.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/48TqDWQ/hmgoepprod-88.webp",
+        "https://i.ibb.co/W0bDBg2/hmgoepprod-87.webp",
+        "https://i.ibb.co/QvXNXM0/hmgoepprod-86.webp",
+        "https://i.ibb.co/QXprNGc/hmgoepprod-54.jpg"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Shirt", "Checked"],
+      "colors": ["Brown", "Checked", "White"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
-        "username": "Ryan Thompson",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "username": "Noah Garcia",
+        "rating": 5,
+        "comment": "Great cloth! Highly recommended."
       }
     ]
   },
   {
     "product": {
-      "name": "",
-      "description": "",
+      "name": "Relaxed Fit Oxford Shirt",
+      "description": "Shirt in oxford cotton. Button-down collar, buttons without placket, and yoke at back. Open chest pocket, long sleeves with button at cuffs, and sleeve placket with link button.",
+      "price": "$24.99",
+      "images": [
+        "https://i.ibb.co/PNYh4C7/hmgoepprod-96.webp",
+        "https://i.ibb.co/KzBD29q/hmgoepprod-97.webp",
+        "https://i.ibb.co/jhn5BLB/hmgoepprod-95.webp"
+      ],
+      "category": ["Men", "Shirt", "Relaxed"],
+      "colors": ["Dark", "Blue", "Solid"],
+      "sizes": ["Small", "Medium", "Large"]
+    },
+    "reviews": [
+      {
+        "username": "Ryan Thompson",
+        "rating": 4.5,
+        "comment": "Nice shirt! Highly recommended."
+      }
+    ]
+  },
+  {
+    "product": {
+      "name": "Regular Fit Oxford Shirt",
+      "description": "Regular-fit shirt in oxford-weave cotton. Button-down collar, classic button placket, open chest pocket, and yoke at back.",
       "price": "$19.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/9cWbSrv/hmgoepprod-93.webp",
+        "https://i.ibb.co/5RQk1hK/hmgoepprod-92.webp",
+        "https://i.ibb.co/gZtHTGN/hmgoepprod-91.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Shirt", "Relaxed"],
+      "colors": ["Khaki ", "Green", "Solid"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "Jason",
         "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "comment": "Great Shirt! Highly recommended."
       }
     ]
   },
   {
     "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
+      "name": "Relaxed Fit Oxford Shirt",
+      "description": "Shirt in oxford cotton. Button-down collar, buttons without placket, and yoke at back. Open chest pocket, long sleeves with button at cuffs, and sleeve placket with link button.",
+      "price": "$34.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/5BhpTcc/hmgoepprod-90.webp",
+        "https://i.ibb.co/rGw09gZ/hmgoepprod-89.webp",
+        "https://i.ibb.co/pd8Rrfn/hmgoepprod-55.jpg"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
-      "sizes": ["Small", "Medium", "Large"]
-    },
-    "reviews": [
-      {
-        "username": "Noah Garcia",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
-      }
-    ]
-  },
-  {
-    "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
-      "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
-      ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Shirt", "Regular"],
+      "colors": ["Light Brown", "Solid", "Gray"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "Jonathan",
-        "rating": 4,
+        "rating": 4.5,
         "comment": "Great product! Highly recommended."
       }
     ]
   },
   {
     "product": {
-      "name": "",
-      "description": "",
-      "price": "$19.99",
-      "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
-      ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
-      "sizes": ["Small", "Medium", "Large"]
-    },
-    "reviews": [
-      {
-        "username": "Brandon Martinez",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
-      }
-    ]
-  },
-  {
-    "product": {
-      "name": "",
-      "description": "",
+      "name": "Slim Fit Pants",
+      "description": "Slim-fit pants in twill. Waistband with concealed hook-and-eye fastener and a zip fly. Side pockets and welt back pockets with button.",
       "price": "$19.99",
       "images": [
         "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
