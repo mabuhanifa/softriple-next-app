@@ -1,10 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import data from "../../data/products.json";
 
+const products = JSON.parse(JSON.stringify(data));
+
 const productsSlice = createSlice({
   name: "products",
   initialState: {
-    products: data,
+    products: products,
   },
   reducers: {
     setProducts: (state, action) => {
