@@ -98,7 +98,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -317,37 +317,37 @@
   },
   {
     "product": {
-      "name": "Product Name",
-      "description": "",
-      "price": "$19.99",
+      "name": "Loose Fit Water-repellent Jacket",
+      "description": "Loose-fit jacket in windproof, water-repellent functional fabric designed for light showers and protection from wind. Lined hood with elasticized drawstring, zipper at front with wind flap and snap fasteners, and long sleeves with adjustable tab at cuffs. Chest pockets with flap and concealed hook-loop fastener and one inner pocket with snap fastener. Elasticized drawstring at hem. Lined.",
+      "price": "$67.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/SPGKQBX/hmgoepprod-6.jpg",
+        "https://i.ibb.co/vVbvVqD/hmgoepprod-27.webp",
+        "https://i.ibb.co/88JH0QF/hmgoepprod-26.webp",
+        "https://i.ibb.co/Zfp8CkR/hmgoepprod-25.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Jacket", "Coat"],
+      "colors": ["Brown", "Khaki", "Beige"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "Christopher Anderson",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "rating": 4.5,
+        "comment": "Great Jacket! Highly recommended."
       }
     ]
   },
   {
     "product": {
-      "name": "Product Name",
-      "description": "",
+      "name": "DryMove™ Track Jacket",
+      "description": "Regular-fit track jacket in DryMove™ functional fabric to wick away moisture from skin and keep you comfortably dry while moving. Stand-up collar, zipper at front with anti-chafe chin guard, and welt front pockets.",
       "price": "$19.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/RpW0t8v/hmgoepprod-29.webp",
+        "https://i.ibb.co/LvrwWYp/hmgoepprod-17.jpg",
+        "https://i.ibb.co/WxsWF1f/hmgoepprod-28.webp",
+        "https://i.ibb.co/HxdTbj2/hmgoepprod-30.webp"
       ],
       "category": ["Men", "Women", "Baby"],
       "colors": ["Red", "Blue", "Green"],
@@ -357,106 +357,129 @@
       {
         "username": "William Thomas",
         "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "comment": "Nice Track Jacket! recommended."
       }
     ]
   },
   {
     "product": {
-      "name": "Product Name",
-      "description": "",
-      "price": "$19.99",
+      "name": "Nylon Windbreaker",
+      "description": "Windbreaker jacket in windproof, water-repellent nylon. Drawstring hood, zipper at front, side pockets, and an inner pocket. Elasticized cuffs and concealed, elasticized drawstring at hem. Mesh lining.",
+      "price": "$34.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/Mp5yLD3/hmgoepprod-31.webp",
+        "https://i.ibb.co/kStv5pD/hmgoepprod-32.webp",
+        "https://i.ibb.co/BcTCrR8/hmgoepprod-33.webp",
+        "https://i.ibb.co/mTQGSrr/hmgoepprod-18.jpg"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Windbreaker", "Jacket"],
+      "colors": ["Black", "Dark", "Solid"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "Anthony",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "rating": 4.5,
+        "comment": "Great Windbreaker! Highly recommended."
       }
     ]
   },
   {
     "product": {
-      "name": "Product Name",
-      "description": "",
+      "name": "Loose Fit Water-repellent Jacket",
+      "description": "Loose-fit jacket in windproof, water-repellent functional fabric designed for light showers and protection from wind. Lined hood with elasticized drawstring, zipper at front with wind flap and snap fasteners, and long sleeves with adjustable tab at cuffs.",
       "price": "$19.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/Xkkgw0L/hmgoepprod-19.jpg",
+        "https://i.ibb.co/PwMhyxF/hmgoepprod-35.webp",
+        "https://i.ibb.co/RgTbp0W/hmgoepprod-34.webp",
+        "https://i.ibb.co/rmxS28C/hmgoepprod-36.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Windproof", "Jacket"],
+      "colors": ["Light Black", "Solid"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "Andrew Jackson",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "rating": 4.5,
+        "comment": "Nice Water-repellent Jacket."
       }
     ]
   },
   {
     "product": {
-      "name": "Product Name",
-      "description": "",
-      "price": "$19.99",
+      "name": "Regular Fit Windbreaker",
+      "description": "Regular-fit windbreaker in windproof, water-repellent nylon. Lined hood with elasticized drawstring, zipper at front, and long sleeves with covered elastic at cuffs.",
+      "price": "$44.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/DwbXF49/hmgoepprod-39.webp",
+        "https://i.ibb.co/7QzSSLS/hmgoepprod-40.webp",
+        "https://i.ibb.co/jvpTKdC/hmgoepprod-38.webp",
+        "https://i.ibb.co/4TXH9sR/hmgoepprod-37.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Jacket", "Windbreaker"],
+      "colors": ["Marron", "Solid"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "Joseph",
         "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "comment": "Nice Windbreaker."
       }
     ]
   },
 
   {
     "product": {
-      "name": "Product Name",
-      "description": "",
+      "name": "Regular Fit Windbreaker",
+      "description": "Regular-fit windbreaker in windproof, water-repellent nylon. Lined hood with elasticized drawstring, zipper at front, and long sleeves with covered elastic at cuffs.",
       "price": "$19.99",
       "images": [
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        "https://i.ibb.co/QmKpRJ4/hmgoepprod-43.webp",
+        "https://i.ibb.co/D5y7v1Q/hmgoepprod-41.webp",
+        "https://i.ibb.co/pfH8zxn/hmgoepprod-43.jpg",
+        "https://i.ibb.co/k6fhyjv/hmgoepprod-42.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Jacket", "Windbreaker"],
+      "colors": ["Black", "Solid"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "James Harris",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "rating": 4.5,
+        "comment": "Nice Windbreaker, Highly recommended."
       }
     ]
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "Regular Fit Windbreaker",
+      "description": "Regular-fit windbreaker in windproof, water-repellent nylon. Lined hood with elasticized drawstring, zipper at front, and long sleeves with covered elastic at cuffs.",
+      "price": "$19.99",
+      "images": [
+        "https://i.ibb.co/z854hR1/hmgoepprod-47.webp",
+        "https://i.ibb.co/6Nk5FSg/hmgoepprod-45.webp",
+        "https://i.ibb.co/ww5qnV7/hmgoepprod-48.webp",
+        "https://i.ibb.co/PZn5RxS/hmgoepprod-46.webp"
+      ],
+      "category": ["Men", "Jacket", "Windbreaker"],
+      "colors": ["White", "Solid"],
+      "sizes": ["Small", "Medium", "Large"]
+    },
+    "reviews": [
+      {
+        "username": "James Harris",
+        "rating": 5,
+        "comment": "Good Windbreaker, Highly recommended."
+      }
+    ]
+  },
+  {
+    "product": {
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -479,7 +502,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -502,7 +525,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -525,7 +548,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -548,7 +571,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -571,7 +594,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -594,7 +617,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -617,7 +640,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -640,7 +663,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -663,7 +686,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -686,7 +709,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -709,7 +732,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -732,7 +755,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -755,7 +778,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -778,7 +801,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -801,7 +824,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -824,7 +847,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -847,7 +870,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -870,7 +893,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -893,7 +916,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -916,7 +939,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
@@ -939,7 +962,7 @@
   },
   {
     "product": {
-      "name": "Product Name",
+      "name": "",
       "description": "",
       "price": "$19.99",
       "images": [
