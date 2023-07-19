@@ -1,12 +1,9 @@
 import HomePage from "@/components/HomePage";
-import { useEffect } from "react";
-import json from "../data/products.json";
+import { useSelector } from "react-redux";
 
 export default function Home() {
-  useEffect(() => {
-   const data = JSON.stringify(json);
-    console.log(JSON.parse(data));
-  }, []);
+  const { products } = useSelector((state) => state.products);
+  console.log(products);
   return (
     <main>
       <HomePage />
