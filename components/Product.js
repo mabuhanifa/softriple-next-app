@@ -2,8 +2,11 @@ import Image from "next/image";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import CategoryBox from "./CategoryBox";
+import Star from "./Star";
 
 export default function Product({ product }) {
+  const findAvg = (arr) => arr.reduce((a, b) => b.rating + a, 0) / arr.length;
+  const star = findAvg(product.reviews);
   return (
     <div className="text-gray-700 border rounded-md p-4">
       <div className="flex justify-center">
@@ -25,6 +28,12 @@ export default function Product({ product }) {
             <CategoryBox category={category} key={index} />
           ))}
         </div>
+      </div>
+      <div className="flex items-center">
+        {star &&
+          [...Array(1).keys()].map((_, i) => (
+            <Star star={star} key={i} />
+          ))}
       </div>
       <div className="flex justify-between items-center my-3 ">
         <button

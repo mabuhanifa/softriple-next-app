@@ -18,6 +18,7 @@ export default function Slider() {
   const topProducts = products.slice().sort((a, b) => {
     return findAvg(b.reviews) - findAvg(a.reviews);
   });
+  
   const swiperRef = useRef();
   return (
     <div className="relative">
@@ -48,7 +49,7 @@ export default function Slider() {
                     height={400}
                     width={320}
                     src={product.product.images[0]}
-                    alt={product.title}
+                    alt="product"
                     className="w-80 object-cover my-10 rounded cursor-pointer"
                   />
                 </div>
