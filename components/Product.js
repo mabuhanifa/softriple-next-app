@@ -1,12 +1,15 @@
+import { addToCart, addToWishList } from "@/redux/slices/productsSlice";
 import Image from "next/image";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { LiaShoppingBagSolid } from "react-icons/lia";
+import { useDispatch } from "react-redux";
 import CategoryBox from "./CategoryBox";
 import Star from "./Star";
 
 export default function Product({ product }) {
   const findAvg = (arr) => arr.reduce((a, b) => b.rating + a, 0) / arr.length;
   const star = findAvg(product.reviews);
+  const dispatch = useDispatch();
   return (
     <div className="text-gray-700 border rounded-md p-4">
       <div className="flex justify-center">
@@ -31,14 +34,15 @@ export default function Product({ product }) {
       </div>
       <div className="flex items-center">
         {star &&
-          [...Array(1).keys()].map((_, i) => (
-            <Star star={star} key={i} />
-          ))}
+          [...Array(1).keys()].map((_, i) => <Star star={star} key={i} />)}
       </div>
       <div className="flex justify-between items-center my-3 ">
         <button
           className="flex items-center gap-x-3 bg-gray-800 hover:bg-black text-gray-100
            py-2 px-4 active:scale-95 rounded-md"
+          onClick={() => {
+            dispatch(addToCart(product.product));
+          }}
         >
           <span className="mb-1">
             <LiaShoppingBagSolid size={20} />
@@ -48,6 +52,9 @@ export default function Product({ product }) {
         <button
           className="flex items-center gap-x-3 border border-gray-300 text-gray-700 
           py-2.5 px-4 active:scale-95 rounded-md group hover:border-gray-400"
+          onClick={() => {
+            dispatch(addToWishList(product.product));
+          }}
         >
           <span className="group-hover:text-red-500">
             <AiOutlineHeart size={20} className="group-hover:hidden" />
