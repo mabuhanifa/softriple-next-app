@@ -2,6 +2,7 @@ import {
   addToCart,
   addToWishList,
   removeFromCart,
+  removeFromWishList,
 } from "@/redux/slices/productsSlice";
 import Image from "next/image";
 import { toast } from "react-hot-toast";
@@ -55,7 +56,7 @@ export default function Product({ product }) {
         {inCart ? (
           <button
             className="flex items-center gap-x-3 bg-red-600 hover:bg-red-800 text-gray-100
-         py-2 px-4 active:scale-95 rounded-md"
+                       py-2 px-4 active:scale-95 rounded-md text-xs"
             onClick={() => {
               dispatch(removeFromCart(product.id));
               toast.success("Product Removed from Cart");
@@ -64,12 +65,12 @@ export default function Product({ product }) {
             <span className="mb-1">
               <VscTrash size={20} />
             </span>
-            <span className="font-[500]">Remove From Cart</span>
+            <span className="font-[500]">Remove</span>
           </button>
         ) : (
           <button
             className="flex items-center gap-x-3 bg-gray-800 hover:bg-black text-gray-100
-             py-2 px-4 active:scale-95 rounded-md"
+                       py-2 px-4 active:scale-95 rounded-md"
             onClick={() => {
               dispatch(addToCart(product));
               toast.success("Product Added To Cart");
@@ -81,21 +82,36 @@ export default function Product({ product }) {
             <span className="font-[500]">Add To Cart</span>
           </button>
         )}
-        <button
-          className="flex items-center gap-x-3 border border-gray-300 text-gray-700 
-          py-2.5 px-4 active:scale-95 rounded-md group hover:border-gray-400"
-          onClick={() => {
-            dispatch(addToWishList(product));
-            toast.success("Product Added To Wishlist");
-          }}
-          disabled={inWishList}
-        >
-          <span className="group-hover:text-red-500">
-            <AiOutlineHeart size={20} className="group-hover:hidden" />
-            <AiFillHeart size={20} className="hidden group-hover:block" />
-          </span>
-          <span className="font-[500]">Add To Wishlist</span>
-        </button>
+        {inWishList ? (
+          <button
+            className="flex items-center gap-x-1 border border-gray-300 text-xs text-white
+                       py-2.5 px-2 active:scale-95 rounded-md group bg-red-600 hover:bg-red-800"
+            onClick={() => {
+              dispatch(removeFromWishList(product.id));
+              toast.success("Product Removed From Wishlist");
+            }}
+          >
+            <span>
+              <VscTrash size={20} />
+            </span>
+            <span className="font-[500]">Remove</span>
+          </button>
+        ) : (
+          <button
+            className="flex items-center gap-x-3 border border-gray-300 text-gray-700 
+                       py-2.5 px-4 active:scale-95 rounded-md group hover:border-gray-400"
+            onClick={() => {
+              dispatch(addToWishList(product));
+              toast.success("Product Added To Wishlist");
+            }}
+          >
+            <span className="group-hover:text-red-500">
+              <AiOutlineHeart size={20} className="group-hover:hidden" />
+              <AiFillHeart size={20} className="hidden group-hover:block" />
+            </span>
+            <span className="font-[500]">Add To Wishlist</span>
+          </button>
+        )}
       </div>
     </div>
   );
