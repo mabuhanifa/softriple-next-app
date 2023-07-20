@@ -19,13 +19,19 @@ export default function Product({ product }) {
         {product.product.description.slice(0, 120)}...
       </p>
       <div className="flex justify-between items-center my-3 ">
-        <button className="flex items-center gap-x-3 bg-gray-800 text-gray-100 py-2 px-3 rounded-md">
+        <button
+          className="flex items-center gap-x-3 bg-gray-800 hover:bg-black text-gray-100
+           py-2 px-4 active:scale-95 rounded-md"
+        >
           <span className="mb-1">
             <LiaShoppingBagSolid size={20} />
           </span>
           <span className="font-[500]">Add To Cart</span>
         </button>
-        <button className="flex items-center gap-x-3 border border-gray-300 text-gray-700 py-2.5 px-3 rounded-md group">
+        <button
+          className="flex items-center gap-x-3 border border-gray-300 text-gray-700 
+          py-2.5 px-4 active:scale-95 rounded-md group hover:border-gray-400"
+        >
           <span className="group-hover:text-red-500">
             <AiOutlineHeart size={20} />
           </span>
