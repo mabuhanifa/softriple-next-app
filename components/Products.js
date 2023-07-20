@@ -9,7 +9,7 @@ export default function Products() {
   });
   return (
     <div className="my-10">
-      <div className="grid grid-cols-3">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 place-items-center px-10">
         {topProducts &&
           topProducts.map((product) => (
             <Product key={product.id} product={product} />

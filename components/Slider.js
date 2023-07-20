@@ -45,11 +45,11 @@ export default function Slider() {
 
                 <div>
                   <Image
-                    height={320}
+                    height={400}
                     width={320}
                     src={product.product.images[0]}
                     alt={product.title}
-                    className="h-80 w-80 object-cover my-10 rounded cursor-pointer"
+                    className="w-80 object-cover my-10 rounded cursor-pointer"
                   />
                 </div>
               </div>
