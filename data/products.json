@@ -113,8 +113,8 @@
   {
     "id": "5",
     "product": {
-      "name": "",
-      "description": "",
+      "name": "Canvas Sneakers",
+      "description": "Sneakers in Bananatex® canvas with lacing and a tongue at front. Canvas lining, cork insoles, and patterned rubber soles.",
       "price": "$19.99",
       "images": [
         "https://i.ibb.co/bLN9cMK/hmgoepprod-9.webp",
@@ -122,15 +122,15 @@
         "https://i.ibb.co/gSQhMDy/hmgoepprod-12.webp",
         "https://i.ibb.co/SBRjTDW/hmgoepprod-11.webp"
       ],
-      "category": ["Men", "Women", "Baby"],
-      "colors": ["Red", "Blue", "Green"],
+      "category": ["Men", "Sneakers", "Canvas"],
+      "colors": ["Black", "Dark", "Solid"],
       "sizes": ["Small", "Medium", "Large"]
     },
     "reviews": [
       {
         "username": "Williams Jarvis",
-        "rating": 4,
-        "comment": "Great product! Highly recommended."
+        "rating": 4.5,
+        "comment": "Outstanding shoes! very comfortable."
       }
     ]
   },
