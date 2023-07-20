@@ -24,11 +24,11 @@ export default function SliderItems({ product }) {
             ))}
           </div>
         </div>
-        <div className="flex items-center justify-center my-5">
+        <div className="flex items-center justify-center my-3">
           {star &&
             [...Array(1).keys()].map((_, i) => <Star star={star} key={i} />)}
         </div>
-        <div className="flex flex-col gap-y-5 items-center my-3">
+        <div className="flex flex-col gap-y-5 items-center my-5">
           <button
             className="flex items-center gap-x-3 bg-gray-800 hover:bg-black text-gray-100
            py-3 px-4 active:scale-95 rounded-md"
@@ -62,7 +62,7 @@ export default function SliderItems({ product }) {
           height={320}
           width={320}
           alt="product"
-          className="w-60 object-cover rounded-lg"
+          className="w-64 object-cover rounded-lg"
         />
       </div>
     </div>
