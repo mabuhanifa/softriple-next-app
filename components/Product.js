@@ -5,6 +5,7 @@ import {
   removeFromWishList,
 } from "@/redux/slices/productsSlice";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { toast } from "react-hot-toast";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { LiaShoppingBagSolid } from "react-icons/lia";
@@ -26,6 +27,12 @@ export default function Product({ product }) {
 
   const dispatch = useDispatch();
 
+  const router = useRouter();
+
+  const pusher = () => {
+    router.push(`/product/${product.id}`);
+  };
+
   return (
     <div className="text-gray-700 border rounded-md p-4">
       <div className="flex justify-center">
@@ -35,9 +42,12 @@ export default function Product({ product }) {
           width={320}
           alt="product"
           className="w-96 object-cover"
+          onClick={pusher}
         />
       </div>
-      <h1 className="text-2xl font-[500] my-3">{product.product.name}</h1>
+      <h1 className="text-2xl font-[500] my-3" onClick={pusher}>
+        {product.product.name}
+      </h1>
       <p className="text-[16px]">
         {product.product.description.slice(0, 120)}...
       </p>
