@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { LiaShoppingBagSolid } from "react-icons/lia";
+import CategoryBox from "./CategoryBox";
 
 export default function Product({ product }) {
   return (
@@ -18,6 +19,13 @@ export default function Product({ product }) {
       <p className="text-[16px]">
         {product.product.description.slice(0, 120)}...
       </p>
+      <div className="my-3">
+        <div>
+          {product.product.category.map((category, index) => (
+            <CategoryBox category={category} key={index} />
+          ))}
+        </div>
+      </div>
       <div className="flex justify-between items-center my-3 ">
         <button
           className="flex items-center gap-x-3 bg-gray-800 hover:bg-black text-gray-100
