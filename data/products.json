@@ -100,8 +100,13 @@
     "reviews": [
       {
         "username": "Rahim Uddin",
-        "rating": 5,
+        "rating": 4.5,
         "comment": "Outstanding shoes for simplicity."
+      },
+      {
+        "username": "Williams Smith",
+        "rating": 4,
+        "comment": "Nice product! Highly recommended."
       }
     ]
   },
