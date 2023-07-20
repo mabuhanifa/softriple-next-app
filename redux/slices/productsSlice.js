@@ -14,12 +14,21 @@ const productsSlice = createSlice({
     addToCart: (state, action) => {
       state.cart = [...state.cart, action.payload];
     },
+    removeFromCart: (state, action) => {
+      state.cart = state.cart.filter((item) => item.id !== action.payload);
+    },
     addToWishList: (state, action) => {
       state.wishList = [...state.wishList, action.payload];
+    },
+    removeFromWishList: (state, action) => {
+      state.wishList = state.wishList.filter(
+        (item) => item.id !== action.payload
+      );
     },
   },
 });
 
 export default productsSlice.reducer;
 
-export const { addToCart, addToWishList } = productsSlice.actions;
+export const { addToCart, addToWishList, removeFromCart, removeFromWishList } =
+  productsSlice.actions;

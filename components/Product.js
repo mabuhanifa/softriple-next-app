@@ -1,8 +1,13 @@
-import { addToCart, addToWishList } from "@/redux/slices/productsSlice";
+import {
+  addToCart,
+  addToWishList,
+  removeFromCart,
+} from "@/redux/slices/productsSlice";
 import Image from "next/image";
 import { toast } from "react-hot-toast";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { LiaShoppingBagSolid } from "react-icons/lia";
+import { VscTrash } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
 import CategoryBox from "./CategoryBox";
 import Star from "./Star";
@@ -13,8 +18,6 @@ export default function Product({ product }) {
   const inCart = cart.some((item) => item.id === product.id);
 
   const inWishList = wishList.some((item) => item.id === product.id);
-
-  console.log(inWishList, inWishList);
 
   const findAvg = (arr) => arr.reduce((a, b) => b.rating + a, 0) / arr.length;
 
@@ -49,20 +52,35 @@ export default function Product({ product }) {
           [...Array(1).keys()].map((_, i) => <Star star={star} key={i} />)}
       </div>
       <div className="flex justify-between items-center my-3 ">
-        <button
-          className="flex items-center gap-x-3 bg-gray-800 hover:bg-black text-gray-100
-           py-2 px-4 active:scale-95 rounded-md"
-          onClick={() => {
-            dispatch(addToCart(product));
-            toast.success("Product Added To Cart");
-          }}
-          disabled={inCart}
-        >
-          <span className="mb-1">
-            <LiaShoppingBagSolid size={20} />
-          </span>
-          <span className="font-[500]">Add To Cart</span>
-        </button>
+        {inCart ? (
+          <button
+            className="flex items-center gap-x-3 bg-red-600 hover:bg-red-800 text-gray-100
+         py-2 px-4 active:scale-95 rounded-md"
+            onClick={() => {
+              dispatch(removeFromCart(product.id));
+              toast.success("Product Removed from Cart");
+            }}
+          >
+            <span className="mb-1">
+              <VscTrash size={20} />
+            </span>
+            <span className="font-[500]">Remove From Cart</span>
+          </button>
+        ) : (
+          <button
+            className="flex items-center gap-x-3 bg-gray-800 hover:bg-black text-gray-100
+             py-2 px-4 active:scale-95 rounded-md"
+            onClick={() => {
+              dispatch(addToCart(product));
+              toast.success("Product Added To Cart");
+            }}
+          >
+            <span className="mb-1">
+              <LiaShoppingBagSolid size={20} />
+            </span>
+            <span className="font-[500]">Add To Cart</span>
+          </button>
+        )}
         <button
           className="flex items-center gap-x-3 border border-gray-300 text-gray-700 
           py-2.5 px-4 active:scale-95 rounded-md group hover:border-gray-400"
