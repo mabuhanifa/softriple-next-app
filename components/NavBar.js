@@ -1,16 +1,14 @@
-import { CiSearch } from "react-icons/ci";
-
-
-import { BiUser } from "react-icons/bi";
-
-import { LiaShoppingBagSolid } from "react-icons/lia";
-
-import { AiOutlineHeart } from "react-icons/ai";
-
 import Link from "next/link";
+import { AiOutlineHeart } from "react-icons/ai";
+import { BiUser } from "react-icons/bi";
 import { BsChevronDown } from "react-icons/bs";
+import { CiSearch } from "react-icons/ci";
+import { LiaShoppingBagSolid } from "react-icons/lia";
+import { useSelector } from "react-redux";
 
 export default function NavBar() {
+  const { cart, wishList } = useSelector((state) => state.products);
+
   return (
     <nav className="flex justify-between items-center text-black/75 font-[500] border-b py-5">
       <div>
@@ -35,28 +33,42 @@ export default function NavBar() {
         </span>
       </div>
       <div>
-        <ul className="flex items-center justify-around gap-x-5 text-gray-700">
-          <li>
+        <div className="flex items-center justify-around gap-x-10 text-gray-700">
+          <div className="relative flex items-center">
             <Link href={"/cart"}>
               <LiaShoppingBagSolid size={20} />
             </Link>
-          </li>
-          <li>
+            <span
+              className={`absolute bottom-2.5 left-2.5 bg-red-600 rounded-full px-1.5 py-0.5 text-white text-xs ${
+                cart.length ? "" : "hidden"
+              }`}
+            >
+              {cart.length}
+            </span>
+          </div>
+          <div className="relative flex items-center">
             <Link href={"/wishlist"}>
               <AiOutlineHeart size={20} />
             </Link>
-          </li>
-          <li className="text-gray-900">
+            <span
+              className={`absolute bottom-3 left-3 bg-red-600 rounded-full px-1.5 py-0.5 text-white text-xs ${
+                wishList.length ? "" : "hidden"
+              }`}
+            >
+              {wishList.length}
+            </span>
+          </div>
+          <div className="text-gray-900">
             <Link href={"/user"}>
               <BiUser size={20} />
             </Link>
-          </li>
+          </div>
           {/* <li className="text-gray-900">
           <Link href={'/cart'}>
             <CiLogout size={20}/>
             </Link>
           </li> */}
-        </ul>
+        </div>
       </div>
     </nav>
   );
