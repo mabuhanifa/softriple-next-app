@@ -5,10 +5,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import Image from "next/image";
 import { useRef } from "react";
 import { useSelector } from "react-redux";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import SliderItems from "./SliderItems";
 
 export default function Slider() {
   const { products } = useSelector((state) => state.products);
@@ -18,10 +18,10 @@ export default function Slider() {
   const topProducts = products.slice().sort((a, b) => {
     return findAvg(b.reviews) - findAvg(a.reviews);
   });
-  
+
   const swiperRef = useRef();
   return (
-    <div className="relative">
+    <div className="relative border rounded-md my-5">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -41,19 +41,7 @@ export default function Slider() {
         {topProducts &&
           topProducts.slice(0, 10).map((product) => (
             <SwiperSlide key={product.id}>
-              <div className="flex justify-center items-center">
-                <div></div>
-
-                <div>
-                  <Image
-                    height={400}
-                    width={320}
-                    src={product.product.images[0]}
-                    alt="product"
-                    className="w-80 object-cover my-10 rounded cursor-pointer"
-                  />
-                </div>
-              </div>
+              <SliderItems product={product} />
             </SwiperSlide>
           ))}
       </Swiper>
