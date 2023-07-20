@@ -3,14 +3,25 @@ import Image from "next/image";
 import { toast } from "react-hot-toast";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { LiaShoppingBagSolid } from "react-icons/lia";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CategoryBox from "./CategoryBox";
 import Star from "./Star";
 
 export default function Product({ product }) {
+  const { cart, wishList } = useSelector((state) => state.products);
+
+  const inCart = cart.some((item) => item.id === product.id);
+
+  const inWishList = wishList.some((item) => item.id === product.id);
+
+  console.log(inWishList, inWishList);
+
   const findAvg = (arr) => arr.reduce((a, b) => b.rating + a, 0) / arr.length;
+
   const star = findAvg(product.reviews);
+
   const dispatch = useDispatch();
+
   return (
     <div className="text-gray-700 border rounded-md p-4">
       <div className="flex justify-center">
@@ -42,9 +53,10 @@ export default function Product({ product }) {
           className="flex items-center gap-x-3 bg-gray-800 hover:bg-black text-gray-100
            py-2 px-4 active:scale-95 rounded-md"
           onClick={() => {
-            dispatch(addToCart(product.product));
+            dispatch(addToCart(product));
             toast.success("Product Added To Cart");
           }}
+          disabled={inCart}
         >
           <span className="mb-1">
             <LiaShoppingBagSolid size={20} />
@@ -55,9 +67,10 @@ export default function Product({ product }) {
           className="flex items-center gap-x-3 border border-gray-300 text-gray-700 
           py-2.5 px-4 active:scale-95 rounded-md group hover:border-gray-400"
           onClick={() => {
-            dispatch(addToWishList(product.product));
+            dispatch(addToWishList(product));
             toast.success("Product Added To Wishlist");
           }}
+          disabled={inWishList}
         >
           <span className="group-hover:text-red-500">
             <AiOutlineHeart size={20} className="group-hover:hidden" />
