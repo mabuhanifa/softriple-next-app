@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 
 export default function Product({ product }) {
@@ -33,7 +33,8 @@ export default function Product({ product }) {
           py-2.5 px-4 active:scale-95 rounded-md group hover:border-gray-400"
         >
           <span className="group-hover:text-red-500">
-            <AiOutlineHeart size={20} />
+            <AiOutlineHeart size={20} className="group-hover:hidden" />
+            <AiFillHeart size={20} className="hidden group-hover:block" />
           </span>
           <span className="font-[500]">Add To Wishlist</span>
         </button>
