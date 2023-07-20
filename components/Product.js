@@ -8,7 +8,7 @@ export default function Product({ product }) {
         height={320}
         width={320}
         alt="product"
-        className="w-80 h-84 object-cover"
+        className="w-80 object-cover"
       />
       <h1>{product.product.name}</h1>
     </div>

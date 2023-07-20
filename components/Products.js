@@ -8,7 +8,7 @@ export default function Products() {
     return findAvg(b.reviews) - findAvg(a.reviews);
   });
   return (
-    <div>
+    <div className="my-10">
       <div className="grid grid-cols-3">
         {topProducts &&
           topProducts.map((product) => (

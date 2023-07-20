@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import Image from "next/image";
 import { useRef } from "react";
 import { useSelector } from "react-redux";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -43,7 +44,9 @@ export default function Slider() {
                 <div></div>
 
                 <div>
-                  <img
+                  <Image
+                    height={320}
+                    width={320}
                     src={product.product.images[0]}
                     alt={product.title}
                     className="h-80 w-80 object-cover my-10 rounded cursor-pointer"
@@ -55,7 +58,10 @@ export default function Slider() {
       </Swiper>
       <div className="flex justify-around items-center ">
         <button onClick={() => swiperRef.current?.slidePrev()}>
-          <HiOutlineArrowSmLeft size={30} className="mt-1 text-2xl cursor-pointer" />
+          <HiOutlineArrowSmLeft
+            size={30}
+            className="mt-1 text-2xl cursor-pointer"
+          />
         </button>
         <button onClick={() => swiperRef.current?.slideNext()}>
           <HiOutlineArrowSmRight size={30} className="mt-1 text-2xl" />
