@@ -21,12 +21,12 @@ export default function Slider() {
 
   const swiperRef = useRef();
   return (
-    <div className="relative border rounded-md my-5">
+    <div className="relative border rounded-md m-5">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 3500,
+          delay: 35000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -45,7 +45,7 @@ export default function Slider() {
             </SwiperSlide>
           ))}
       </Swiper>
-      <div className="flex justify-around items-center ">
+      <div className="flex justify-around items-center pb-5">
         <button onClick={() => swiperRef.current?.slidePrev()}>
           <HiOutlineArrowSmLeft
             size={30}
