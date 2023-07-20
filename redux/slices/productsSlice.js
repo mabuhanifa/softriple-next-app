@@ -7,14 +7,19 @@ const productsSlice = createSlice({
   name: "products",
   initialState: {
     products: products,
+    cart: [],
+    wishList: [],
   },
   reducers: {
-    setProducts: (state, action) => {
-      state.products = action.payload;
+    addToCart: (state, action) => {
+      state.cart = [...state.cart, action.payload];
+    },
+    addToWishList: (state, action) => {
+      state.wishList = [...state.wishList, action.payload];
     },
   },
 });
 
 export default productsSlice.reducer;
 
-export const { setProducts } = productsSlice.actions;
+export const { addToCart, addToWishList } = productsSlice.actions;
