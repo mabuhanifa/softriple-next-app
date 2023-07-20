@@ -1,5 +1,6 @@
 import { addToCart, addToWishList } from "@/redux/slices/productsSlice";
 import Image from "next/image";
+import { toast } from "react-hot-toast";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { useDispatch } from "react-redux";
@@ -34,6 +35,7 @@ export default function SliderItems({ product }) {
            py-3 px-4 active:scale-95 rounded-md"
             onClick={() => {
               dispatch(addToCart(product.product));
+              toast.success("Product Added To Cart");
             }}
           >
             <span className="mb-1">
@@ -46,6 +48,7 @@ export default function SliderItems({ product }) {
           py-2.5 px-4 active:scale-95 rounded-md group hover:border-gray-400"
             onClick={() => {
               dispatch(addToWishList(product.product));
+              toast.success("Product Added To Wishlist");
             }}
           >
             <span className="group-hover:text-red-500">
