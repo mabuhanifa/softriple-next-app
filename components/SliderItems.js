@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { GoLinkExternal } from "react-icons/go";
-import CategoryBox from "./CategoryBox";
+import Color from "./Color";
 import Star from "./Star";
 
 export default function SliderItems({ product }) {
@@ -19,10 +19,17 @@ export default function SliderItems({ product }) {
         <div className="w-80 mx-auto text-center">
           <p className="text-[16px]">{product.product.description}</p>
         </div>
-        <div className="my-3">
+        {/* <div className="my-3">
           <div>
             {product.product.category.map((category, index) => (
               <CategoryBox category={category} key={index} />
+            ))}
+          </div>
+        </div> */}
+        <div className="my-3">
+          <div>
+            {product.product.colors.map((color, index) => (
+              <Color color={color} key={index} />
             ))}
           </div>
         </div>
