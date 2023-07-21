@@ -1,8 +1,10 @@
 import {
   decreaseQuantity,
   increaseQuantity,
+  removeFromCart,
 } from "@/redux/slices/productsSlice";
 import Image from "next/image";
+import { VscTrash } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Cart() {
@@ -53,18 +55,18 @@ export default function Cart() {
                         <p className="font-bold my-1">Quantity :</p>
                         <div className="flex items-center gap-x-5 text-gray-500 text-sm">
                           <button
-                            className="text-xl"
+                            className="text-xl px-2 border rounded"
                             onClick={() => {
-                              dispatch(increaseQuantity(item.id));
+                              dispatch(decreaseQuantity(item.id));
                             }}
                           >
                             -
                           </button>
                           <p>{item.quantity}</p>
                           <button
-                            className="text-xl"
+                            className="text-xl px-2 border rounded"
                             onClick={() => {
-                              dispatch(decreaseQuantity(item.id));
+                              dispatch(increaseQuantity(item.id));
                             }}
                           >
                             +
@@ -74,7 +76,12 @@ export default function Cart() {
                     </div>
                   </div>
                 </div>
-                <div></div>
+                <div className="flex flex-col items-end gap-y-10 text-gray-500">
+                  <p>MRP: {item.product.price}</p>
+                  <button onClick={() => dispatch(removeFromCart(item.id))}>
+                    <VscTrash size={20} />
+                  </button>
+                </div>
               </div>
             ))}
           </div>
