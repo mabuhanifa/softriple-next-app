@@ -25,7 +25,7 @@ export default function NavBar() {
       <div className="relative flex items-center">
         <input
           type="text"
-          className="pl-10 py-2.5 rounded border border-black/10"
+          className="pl-10 py-2 rounded border border-black/10 text-base"
           placeholder="Search"
         />
         <span className="absolute left-2 text-2xl text-black/50">

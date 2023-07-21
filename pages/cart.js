@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useSelector } from "react-redux";
 
 export default function Cart() {
@@ -13,12 +14,17 @@ export default function Cart() {
           <h1 className="text-md font-bold text-gray-700">Cart Items</h1>
           <div>
             {cart.map((item) => (
-              <div key={item.id} className="flex justify-between items-center border-b my-5 py-3">
+              <div
+                key={item.id}
+                className="flex justify-between items-center border-b my-5 py-3"
+              >
                 <div className="flex items-center gap-x-5">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src={item.product.images[0]}
                     alt={item.title}
-                    className="w-20 h-20 object-cover"
+                    className="w-20 h-20 object-cover rounded-md"
                   />
                   <div>
                     <h1 className="text-lg font-bold text-gray-700">
@@ -28,7 +34,18 @@ export default function Cart() {
                       {item.product.category[0]}&apos;s{" "}
                       {item.product.category[1]}
                     </p>
-                    <p className="text-sm font-bold text-gray-500 my-1">Size : </p>
+                    <div className="flex items-center gap-x-2 text-gray-500 text-sm">
+                      <p className="font-bold my-1">
+                        Size :
+                      </p>
+                      <select name="size" id="size">
+                        {item.product.sizes.map((size, i) => (
+                          <option value={size} key={i}>
+                            {size}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
                 </div>
                 <div></div>
