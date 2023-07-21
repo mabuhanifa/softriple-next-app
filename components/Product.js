@@ -65,16 +65,15 @@ export default function Product({ product }) {
       <div className="flex justify-between items-center my-3 ">
         {inCart ? (
           <button
-            className="flex items-center gap-x-3 bg-red-600 hover:bg-red-800 text-gray-100
-                       py-2 px-4 active:scale-95 rounded-md text-xs"
+            className="flex items-center gap-x-1 bg-red-600 hover:bg-red-800 text-gray-100
+                       py-2.5 px-4 active:scale-95 rounded-md text-xs"
             onClick={() => {
               dispatch(removeFromCart(product.id));
               toast.success("Product Removed from Cart");
             }}
           >
-            <span className="mb-1">
-              <VscTrash size={20} />
-            </span>
+            <VscTrash size={20} />
+
             <span className="font-[500]">Remove</span>
           </button>
         ) : (
@@ -94,16 +93,15 @@ export default function Product({ product }) {
         )}
         {inWishList ? (
           <button
-            className="flex items-center gap-x-1 border border-gray-300 text-xs text-white
-                       py-2.5 px-2 active:scale-95 rounded-md group bg-red-600 hover:bg-red-800"
+            className="flex items-center gap-x-1 bg-red-600 hover:bg-red-800 text-gray-100
+                     py-2.5 px-4 active:scale-95 rounded-md text-xs"
             onClick={() => {
               dispatch(removeFromWishList(product.id));
-              toast.success("Product Removed From Wishlist");
+              toast.success("Product Removed from Cart");
             }}
           >
-            <span>
-              <VscTrash size={20} />
-            </span>
+            <VscTrash size={20} />
+
             <span className="font-[500]">Remove</span>
           </button>
         ) : (
