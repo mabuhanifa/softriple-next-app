@@ -1,5 +1,5 @@
 export default function Wishlist() {
   return (
-    <div>wishlist</div>
+    <div className="max-w-[1400px] mx-auto">wishlist</div>
   )
 }

@@ -82,7 +82,7 @@ export default function Product({ product }) {
             className="flex items-center gap-x-3 bg-gray-800 hover:bg-black text-gray-100
                        py-2 px-4 active:scale-95 rounded-md"
             onClick={() => {
-              dispatch(addToCart(product));
+              dispatch(addToCart({ ...product, quantity: 1 }));
               toast.success("Product Added To Cart");
             }}
           >

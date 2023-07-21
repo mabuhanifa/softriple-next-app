@@ -1,5 +1,5 @@
 export default function User() {
   return (
-    <div>user</div>
+    <div className="max-w-[1400px] mx-auto">user</div>
   )
 }
