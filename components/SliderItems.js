@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { GoLinkExternal } from "react-icons/go";
 import Color from "./Color";
+import Size from "./Size";
 import Star from "./Star";
 
 export default function SliderItems({ product }) {
@@ -37,6 +38,14 @@ export default function SliderItems({ product }) {
           {star &&
             [...Array(1).keys()].map((_, i) => <Star star={star} key={i} />)}
         </div>
+        <div className="my-3">
+          <div>
+            {product.product.sizes.map((size, index) => (
+              <Size size={size} key={index} />
+            ))}
+          </div>
+        </div>
+
         <div className="flex justify-center  items-center my-5">
           <button
             className="flex justify-center items-center gap-x-5 border border-[#cacaca] px-5 py-3 rounded-lg font-[500] hover:bg-gray-700 hover:text-white"
