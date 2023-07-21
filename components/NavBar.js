@@ -10,7 +10,10 @@ export default function NavBar() {
   const { cart, wishList } = useSelector((state) => state.products);
 
   return (
-    <nav className="flex justify-between items-center text-black/75 font-[500] border-b py-5 xl:px-60 px-10 text-lg">
+    <nav
+      className="flex justify-between items-center text-black/75 font-[500] border-b py-5 
+                xl:px-60 px-10 text-lg"
+    >
       <div>
         <Link href={"/"}>
           <h1>Logo</h1>
