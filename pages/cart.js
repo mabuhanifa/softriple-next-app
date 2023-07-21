@@ -1,9 +1,13 @@
+import {
+  decreaseQuantity,
+  increaseQuantity,
+} from "@/redux/slices/productsSlice";
 import Image from "next/image";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Cart() {
   const { cart } = useSelector((state) => state.products);
-  console.log(cart);
+  const dispatch = useDispatch();
   return (
     <div className="max-w-[1400px] mx-auto">
       <h1 className="text-3xl font-bold text-gray-700 text-center mt-20">
@@ -35,16 +39,38 @@ export default function Cart() {
                       {item.product.category[1]}
                     </p>
                     <div className="flex items-center gap-x-2 text-gray-500 text-sm">
-                      <p className="font-bold my-1">
-                        Size :
-                      </p>
-                      <select name="size" id="size">
-                        {item.product.sizes.map((size, i) => (
-                          <option value={size} key={i}>
-                            {size}
-                          </option>
-                        ))}
-                      </select>
+                      <div className="flex items-center gap-x-2 text-gray-500 text-sm">
+                        <p className="font-bold my-1">Size :</p>
+                        <select name="size" id="size">
+                          {item.product.sizes.map((size, i) => (
+                            <option value={size} key={i}>
+                              {size}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                      <div className="flex items-center gap-x-2 text-gray-500 text-sm">
+                        <p className="font-bold my-1">Quantity :</p>
+                        <div className="flex items-center gap-x-5 text-gray-500 text-sm">
+                          <button
+                            className="text-xl"
+                            onClick={() => {
+                              dispatch(increaseQuantity(item.id));
+                            }}
+                          >
+                            -
+                          </button>
+                          <p>{item.quantity}</p>
+                          <button
+                            className="text-xl"
+                            onClick={() => {
+                              dispatch(decreaseQuantity(item.id));
+                            }}
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -25,10 +25,27 @@ const productsSlice = createSlice({
         (item) => item.id !== action.payload
       );
     },
+    increaseQuantity: (state, action) => {
+      const item = state.cart.find((item) => item.id === action.payload);
+      item.quantity += 1;
+    },
+    decreaseQuantity: (state, action) => {
+      const item = state.cart.find((item) => item.id === action.payload);
+      item.quantity -= 1;
+      if (item.quantity === 0) {
+        state.cart = state.cart.filter((item) => item.id !== action.payload);
+      }
+    },
   },
 });
 
 export default productsSlice.reducer;
 
-export const { addToCart, addToWishList, removeFromCart, removeFromWishList } =
-  productsSlice.actions;
+export const {
+  addToCart,
+  addToWishList,
+  removeFromCart,
+  removeFromWishList,
+  increaseQuantity,
+  decreaseQuantity,
+} = productsSlice.actions;
