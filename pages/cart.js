@@ -10,6 +10,11 @@ import { useDispatch, useSelector } from "react-redux";
 export default function Cart() {
   const { cart } = useSelector((state) => state.products);
   const dispatch = useDispatch();
+  const total = cart.reduce(
+    (acc, item) =>
+      acc + item.quantity * Number(item.product.price.split("$")[1]),
+    0
+  );
   return (
     <div className="max-w-[1400px] mx-auto">
       <h1 className="text-3xl font-bold text-gray-700 text-center mt-20">
@@ -30,7 +35,7 @@ export default function Cart() {
                     height={100}
                     src={item.product.images[0]}
                     alt={item.title}
-                    className="w-20 h-20 object-cover rounded-md"
+                    className="w-20 object-cover rounded-md"
                   />
                   <div>
                     <h1 className="text-lg font-bold text-gray-700">
@@ -91,16 +96,7 @@ export default function Cart() {
           <div className="flex flex-col p-5 rounded-lg bg-black/[0.05]">
             <div className="flex items-center justify-between">
               <p>SUBTOTAL</p>
-              <p>
-                $ {cart
-                  .reduce(
-                    (acc, item) =>
-                      acc +
-                      item.quantity * Number(item.product.price.split("$")[1]),
-                    0
-                  )
-                  .toFixed(2)}
-              </p>
+              <p>$ {total.toFixed(2)}</p>
             </div>
             <div className="text-sm md:text-md py-5 border-t border-gray-300 mt-5 leading-7">
               The subtotal reflects the total price of your order, including
@@ -108,7 +104,11 @@ export default function Cart() {
               include delivery costs and international transaction fees.
             </div>
           </div>
-          <button className="bg-black text-white p-2.5 rounded-full mt-5 w-[350px]">Checkout</button>
+          {total > 0 && (
+            <button className="bg-black text-white p-2.5 rounded-full mt-5 w-[350px]">
+              Checkout
+            </button>
+          )}
         </div>
       </div>
     </div>
