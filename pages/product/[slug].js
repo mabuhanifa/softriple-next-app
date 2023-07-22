@@ -1,8 +1,14 @@
 import ProductCarousel from "@/components/ProductCarousel";
-import { addToCart } from "@/redux/slices/productsSlice";
+import {
+  addToCart,
+  addToWishList,
+  removeFromCart,
+  removeFromWishList,
+} from "@/redux/slices/productsSlice";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { VscTrash } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function ProductDetails() {
@@ -73,27 +79,41 @@ export default function ProductDetails() {
             </div>
           </div>
 
-          <button
-            className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
-            onClick={() =>
-              dispatch(addToCart({ ...selectedProduct, quantity: 1 }))
-            }
-          >
-            Add to Cart
-          </button>
-          <button
-            className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
-            onClick={() =>
-              dispatch(addToCart({ ...selectedProduct, quantity: 1 }))
-            }
-          >
-            Add to Cart
-          </button>
+          {inCart ? (
+            <button
+              className="w-full py-4 rounded-full bg-red-600 text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
+              onClick={() => dispatch(removeFromCart(selectedProduct?.id))}
+            >
+              Remove From Cart
+            </button>
+          ) : (
+            <button
+              className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
+              onClick={() =>
+                dispatch(addToCart({ ...selectedProduct, quantity: 1 }))
+              }
+            >
+              Add to Cart
+            </button>
+          )}
 
-          <button className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10">
-            Whishlist
-            <IoMdHeartEmpty size={20} />
-          </button>
+          {inWishList ? (
+            <button
+              className="w-full py-4 rounded-full border bg-red-500 text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10 text-white"
+              onClick={() => dispatch(removeFromWishList(selectedProduct?.id))}
+            >
+              Remove
+              <VscTrash size={20} />
+            </button>
+          ) : (
+            <button
+              className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10"
+              onClick={() => dispatch(addToWishList(selectedProduct))}
+            >
+              Whishlist
+              <IoMdHeartEmpty size={20} />
+            </button>
+          )}
 
           <div>
             <div className="text-lg font-bold mb-5">Product Details</div>
