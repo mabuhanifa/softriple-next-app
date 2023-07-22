@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { toast } from "react-hot-toast";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { GoLinkExternal } from "react-icons/go";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { VscTrash } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
@@ -35,7 +36,7 @@ export default function Product({ product }) {
 
   return (
     <div className="text-gray-700 border rounded-md p-4">
-      <div className="flex justify-center">
+      <div className="flex justify-center items-center relative group">
         <Image
           src={product.product.images[0]}
           height={320}
@@ -44,8 +45,17 @@ export default function Product({ product }) {
           className="w-96 object-cover"
           onClick={pusher}
         />
+        <div className="absolute bottom-5 hidden group-hover:block">
+          <button
+            className="flex justify-center items-center gap-x-5 text-base px-5 py-3 rounded-lg font-[500] text-white bg-gray-700"
+            onClick={pusher}
+          >
+            <span>View</span>
+            <GoLinkExternal size={20} />
+          </button>
+        </div>
       </div>
-      <h1 className="text-2xl font-[500] my-3" onClick={pusher}>
+      <h1 className="text-2xl font-[500] my-3 cursor-pointer" onClick={pusher}>
         {product.product.name}
       </h1>
       <p className="text-[16px]">
