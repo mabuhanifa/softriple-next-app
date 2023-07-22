@@ -6,13 +6,15 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function ProductDetails() {
-  const { products } = useSelector((state) => state.products);
+  const { query } = useRouter();
+  const { products, cart, wishList } = useSelector((state) => state.products);
+  const product = products.find((item) => item.id === query.slug);
+
+  const inCart = cart.some((item) => item.id === product?.id);
+
+  const inWishList = wishList.some((item) => item.id === product?.id);
 
   const dispatch = useDispatch();
-
-  const { query } = useRouter();
-
-  const product = products.find((item) => item.id === query.slug);
 
   const [selectedProduct, setSelectedProduct] = useState({
     ...product,
