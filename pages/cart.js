@@ -8,13 +8,20 @@ import { VscTrash } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Cart() {
-  const { cart } = useSelector((state) => state.products);
+  const { cart, wishList } = useSelector((state) => state.products);
+
+  const inCart = cart.some((item) => item.id === product.id);
+
+  const inWishList = wishList.some((item) => item.id === product.id);
+
   const dispatch = useDispatch();
+
   const total = cart.reduce(
     (acc, item) =>
       acc + item.quantity * Number(item.product.price.split("$")[1]),
     0
   );
+
   return (
     <div className="max-w-[1400px] mx-auto">
       <h1 className="text-3xl font-bold text-gray-700 text-center mt-20">
@@ -34,7 +41,7 @@ export default function Cart() {
                     width={100}
                     height={100}
                     src={item.product.images[0]}
-                    alt={item.title}
+                    alt={"cart-image"}
                     className="w-20 object-cover rounded-md"
                   />
                   <div>

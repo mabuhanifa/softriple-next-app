@@ -6,6 +6,7 @@ import {
 } from "@/redux/slices/productsSlice";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { GoLinkExternal } from "react-icons/go";
@@ -17,6 +18,11 @@ import Star from "./Star";
 
 export default function Product({ product }) {
   const { cart, wishList } = useSelector((state) => state.products);
+
+  const [selectedProduct, setSelectedProduct] = useState({
+    ...product,
+    selectedSize: product?.product?.sizes[0],
+  });
 
   const inCart = cart.some((item) => item.id === product.id);
 
@@ -91,7 +97,7 @@ export default function Product({ product }) {
             className="flex items-center gap-x-3 bg-gray-800 hover:bg-black text-gray-100
                        py-2 px-4 active:scale-95 rounded-md"
             onClick={() => {
-              dispatch(addToCart({ ...product, quantity: 1 }));
+              dispatch(addToCart({ ...selectedProduct, quantity: 1 }));
               toast.success("Product Added To Cart");
             }}
           >

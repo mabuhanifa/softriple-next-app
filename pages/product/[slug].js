@@ -1,21 +1,24 @@
 import ProductCarousel from "@/components/ProductCarousel";
+import { addToCart } from "@/redux/slices/productsSlice";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function ProductDetails() {
   const { products } = useSelector((state) => state.products);
+
+  const dispatch = useDispatch();
 
   const { query } = useRouter();
 
   const product = products.find((item) => item.id === query.slug);
 
-  let cartProduct = {
-    id: product?.id,
-    ...{ ...product?.product, sizes: product?.product?.sizes[0] },
-  };
-  const [selectedProduct, setSelectedProduct] = useState(cartProduct);
+  const [selectedProduct, setSelectedProduct] = useState({
+    ...product,
+    selectedSize: product?.product?.sizes[0],
+  });
+  console.log(selectedProduct);
 
   return (
     <div className="max-w-[1400px] mx-auto my-10">
@@ -49,15 +52,15 @@ export default function ProductDetails() {
                 {product?.product?.sizes?.map((size, index) => (
                   <span
                     className={`text-gray-700 text-sm mr-2 border border-gray-300 px-5 py-2 rounded-full cursor-pointer ${
-                      selectedProduct?.sizes === size
+                      selectedProduct?.selectedSize === size
                         ? "bg-gray-400 text-white"
                         : ""
                     }`}
                     key={index}
                     onClick={() => {
                       setSelectedProduct({
-                        ...cartProduct,
-                        sizes: size,
+                        ...selectedProduct,
+                        selectedSize: size,
                       });
                     }}
                   >
@@ -68,7 +71,20 @@ export default function ProductDetails() {
             </div>
           </div>
 
-          <button className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75">
+          <button
+            className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
+            onClick={() =>
+              dispatch(addToCart({ ...selectedProduct, quantity: 1 }))
+            }
+          >
+            Add to Cart
+          </button>
+          <button
+            className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
+            onClick={() =>
+              dispatch(addToCart({ ...selectedProduct, quantity: 1 }))
+            }
+          >
             Add to Cart
           </button>
 
