@@ -13,6 +13,7 @@ export default function SliderItems({ product }) {
     router.push(`/product/${product.id}`);
   };
 
+
   return (
     <div className="flex flex-col-reverse sm:flex-row-reverse gap-x-20 justify-center items-center text-gray-700 p-4">
       <div>
@@ -39,7 +40,7 @@ export default function SliderItems({ product }) {
           </div>
         </div>
 
-        <div className="flex justify-center  items-center my-5">
+        <div className="flex justify-center  items-center mt-7">
           <button
             className="flex justify-center items-center gap-x-5 border border-[#cacaca] px-5 py-3 rounded-lg font-[500] hover:bg-gray-700 hover:text-white"
             onClick={pusher}
