@@ -1,11 +1,8 @@
 import CartItem from "@/components/CartItem";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 export default function Cart() {
-  const { cart, wishList } = useSelector((state) => state.products);
-
-
-  const dispatch = useDispatch();
+  const { cart } = useSelector((state) => state.products);
 
   const total = cart.reduce(
     (acc, item) =>

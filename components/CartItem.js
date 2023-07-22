@@ -1,7 +1,11 @@
+import { decreaseQuantity, increaseQuantity } from "@/redux/slices/productsSlice";
 import Image from "next/image";
 import { VscTrash } from "react-icons/vsc";
+import { useDispatch } from "react-redux";
 
 export default function CartItem({ item }) {
+  const dispatch = useDispatch();
+  
   return (
     <div className="flex justify-between items-center border-b my-5 py-3">
       <div className="flex items-center gap-x-5">
