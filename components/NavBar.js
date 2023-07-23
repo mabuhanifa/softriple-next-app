@@ -1,14 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
-import { BiUser } from "react-icons/bi";
+import { BiMenuAltRight, BiUser } from "react-icons/bi";
 import { BsChevronDown } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import { LiaShoppingBagSolid } from "react-icons/lia";
+import { VscChromeClose } from "react-icons/vsc";
 import { useSelector } from "react-redux";
 
 export default function NavBar() {
   const { cart, wishList } = useSelector((state) => state.products);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
     <nav
@@ -26,13 +29,13 @@ export default function NavBar() {
           />
         </Link>
       </div>
-      <div className="flex items-center gap-x-3">
+      <div className="md:flex items-center gap-x-3 hidden">
         <h1>Category</h1>
         <span className="mt-1">
           <BsChevronDown />
         </span>
       </div>
-      <div className="relative flex items-center">
+      <div className="relative md:flex items-center hidden">
         <input
           type="text"
           className="pl-10 py-2 rounded border border-black/10 text-base"
@@ -73,11 +76,19 @@ export default function NavBar() {
               <BiUser size={20} />
             </Link>
           </div>
-          {/* <li className="text-gray-900">
-          <Link href={'/cart'}>
-            <CiLogout size={20}/>
-            </Link>
-          </li> */}
+          <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex md:hidden justify-center items-center hover:bg-black/[0.05] cursor-pointer relative -mr-2">
+            {mobileMenu ? (
+              <VscChromeClose
+                className="text-[16px]"
+                onClick={() => setMobileMenu(false)}
+              />
+            ) : (
+              <BiMenuAltRight
+                className="text-[20px]"
+                onClick={() => setMobileMenu(true)}
+              />
+            )}
+          </div>
         </div>
       </div>
     </nav>
