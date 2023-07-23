@@ -1,11 +1,13 @@
 import ProductCarousel from "@/components/ProductCarousel";
 import Star from "@/components/Star";
 import {
+  addReview,
   addToCart,
   addToWishList,
   removeFromCart,
   removeFromWishList,
 } from "@/redux/slices/productsSlice";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
@@ -35,8 +37,15 @@ export default function ProductDetails() {
       values: 5,
     },
   ];
+  const [comment, setComment] = useState("");
+
+  const [rating, setRating] = useState(5);
+
   const { query } = useRouter();
-  const { products, cart, wishList } = useSelector((state) => state.products);
+
+  const { products, cart, wishList, user } = useSelector(
+    (state) => state.products
+  );
   const product = products.find((item) => item.id === query.slug);
 
   const inCart = cart.some((item) => item.id === product?.id);
@@ -49,10 +58,6 @@ export default function ProductDetails() {
     ...product,
     selectedSize: product?.product?.sizes[0],
   });
-  const findAvg = (arr) =>
-    arr?.reduce((a, b) => b?.rating + a, 0) / arr?.length;
-
-  const star = findAvg(product?.reviews);
 
   return (
     <div className="max-w-[1400px] mx-5 md:mx-auto my-10 ">
@@ -151,7 +156,7 @@ export default function ProductDetails() {
           </div>
         </div>
       </div>
-      <div className="my-20 md:flex justify-between">
+      <div className="my-20 md:flex justify-around px-5">
         <div>
           <h2 className="text-xl font-[500] ">Reviews By Users</h2>
           <div className="flex flex-col items-center gap-2 my-5 p-3 border">
@@ -162,9 +167,9 @@ export default function ProductDetails() {
               >
                 <h4 className="text-lg font-semibold">{review?.username}</h4>
                 <div className="flex items-center">
-                  {star &&
+                  {review.rating &&
                     [...Array(1).keys()].map((_, i) => (
-                      <Star star={star} key={i} />
+                      <Star star={review.rating} key={i} />
                     ))}
                 </div>
                 <p>{review?.comment}</p>
@@ -172,28 +177,58 @@ export default function ProductDetails() {
             ))}
           </div>
         </div>
-        <div>
-          <h2 className="text-xl font-[500] my-3">Post Your Review</h2>
-          <div>
-            <input
-              type="text"
-              placeholder="Add your comment"
-              className="bg-gray-300 px-3 py-2"
-            />
-            <br />
-            <select name="" id="" className="my-5 p-2 border border-gray-500">
-              {reviews.map((review, index) => (
-                <option key={index} value={review?.values}>
-                  {review?.name}
-                </option>
-              ))}
-            </select>
-            <br />
-            <button className="bg-black text-white py-2 px-5 rounded-full mt-3">
-              Submit
-            </button>
+        {user ? (
+          <div className="border rounded-lg p-5">
+            <h2 className="text-xl font-[500] my-3">Post Your Review</h2>
+            <div>
+              <input
+                type="text"
+                placeholder="Add your comment"
+                className="bg-gray-300 px-3 py-2"
+                onChange={(e) => setComment(e.target.value)}
+              />
+              <br />
+              <select
+                name=""
+                id=""
+                className="my-5 p-2 border border-gray-500"
+                onChange={(e) => setRating(e.target.value)}
+              >
+                {reviews.map((review, index) => (
+                  <option key={index} value={review?.values}>
+                    {review?.name}
+                  </option>
+                ))}
+              </select>
+              <br />
+              <button
+                className="bg-black text-white py-2 px-5 rounded-full mt-3"
+                onClick={() => {
+                  dispatch(
+                    addReview({
+                      id: product?.id,
+                      review: {
+                        username: user,
+                        rating: Number(rating),
+                        comment: comment,
+                      },
+                    })
+                  );
+                }}
+              >
+                Submit
+              </button>
+            </div>
           </div>
-        </div>
+        ) : (
+          <p>
+            Please
+            <span className="text-red-500 font-semibold mx-5">
+              <Link href={"/login"}>Login</Link>
+            </span>
+            To Post a review
+          </p>
+        )}
       </div>
     </div>
   );
