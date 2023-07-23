@@ -1,7 +1,5 @@
 import {
-  decreaseQuantity,
-  increaseQuantity,
-  removeFromCart,
+  removeFromWishList
 } from "@/redux/slices/productsSlice";
 import Image from "next/image";
 import { VscTrash } from "react-icons/vsc";
@@ -38,34 +36,12 @@ export default function WishItem({ item }) {
                 ))}
               </select>
             </div>
-            <div className="flex items-center gap-x-2 text-gray-500 text-sm">
-              <p className="font-bold my-1">Quantity :</p>
-              <div className="flex items-center gap-x-5 text-gray-500 text-sm">
-                <button
-                  className="text-xl px-2 border rounded"
-                  onClick={() => {
-                    dispatch(decreaseQuantity(item.id));
-                  }}
-                >
-                  -
-                </button>
-                <p>{item.quantity}</p>
-                <button
-                  className="text-xl px-2 border rounded"
-                  onClick={() => {
-                    dispatch(increaseQuantity(item.id));
-                  }}
-                >
-                  +
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </div>
       <div className="flex flex-col items-end gap-y-10 text-gray-500">
         <p>MRP: {item.product.price}</p>
-        <button onClick={() => dispatch(removeFromCart(item.id))}>
+        <button onClick={() => dispatch(removeFromWishList(item.id))}>
           <VscTrash size={20} />
         </button>
       </div>
