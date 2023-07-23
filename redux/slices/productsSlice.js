@@ -9,6 +9,7 @@ const productsSlice = createSlice({
     products: products,
     cart: [],
     wishList: [],
+    filter: "",
   },
   reducers: {
     addToCart: (state, action) => {
@@ -36,6 +37,9 @@ const productsSlice = createSlice({
         state.cart = state.cart.filter((item) => item.id !== action.payload);
       }
     },
+    setFilter: (state, action) => {
+      state.filter = action.payload;
+    },
   },
 });
 
@@ -48,4 +52,5 @@ export const {
   removeFromWishList,
   increaseQuantity,
   decreaseQuantity,
+  setFilter,
 } = productsSlice.actions;

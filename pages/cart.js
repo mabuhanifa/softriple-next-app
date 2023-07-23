@@ -9,7 +9,6 @@ export default function Cart() {
       acc + item.quantity * Number(item.product.price.split("$")[1]),
     0
   );
-
   return (
     <div className="max-w-[1400px] mx-auto">
       <h1 className="text-3xl font-bold text-gray-700 text-center mt-20">
