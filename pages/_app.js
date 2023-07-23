@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-page-custom-font */
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import store from "@/redux/store/store";
 import "@/styles/globals.css";
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <NavBar />
       <Component {...pageProps} />
+      <Footer />
     </Provider>
   );
 }
