@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
@@ -16,7 +17,13 @@ export default function NavBar() {
     >
       <div>
         <Link href={"/"}>
-          <h1>Logo</h1>
+          <Image
+            src="https://i.ibb.co/vHYRXB6/4.jpg"
+            alt="logo"
+            width={50}
+            height={50}
+            className="w-10 h-10 object-cover rounded-full"
+          />
         </Link>
       </div>
       <div className="flex items-center gap-x-3">

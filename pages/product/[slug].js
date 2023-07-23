@@ -29,7 +29,7 @@ export default function ProductDetails() {
   console.log(selectedProduct);
 
   return (
-    <div className="max-w-[1400px] mx-auto my-10">
+    <div className="max-w-[1400px] mx-5 md:mx-auto my-10 ">
       <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
         <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
           <ProductCarousel images={product?.product?.images} />
