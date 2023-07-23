@@ -48,9 +48,9 @@ export default function ProductDetails() {
   const { products, cart, wishList, user } = useSelector(
     (state) => state.products
   );
-  const product = products.find((item) => item.id === query.slug);
+  const product = products?.find((item) => item?.id === query.slug);
 
-  const inCart = cart.some((item) => item.id === product?.id);
+  const inCart = cart.some((item) => item?.id === product?.id);
 
   const inWishList = wishList.some((item) => item.id === product?.id);
 
@@ -61,9 +61,10 @@ export default function ProductDetails() {
     selectedSize: product?.product?.sizes[0],
   });
 
-  const findAvg = (arr) => arr.reduce((a, b) => b.rating + a, 0) / arr.length;
+  const findAvg = (arr) =>
+    arr?.reduce((a, b) => b?.rating + a, 0) / arr?.length;
 
-  const star = findAvg(product.reviews);
+  const star = findAvg(product?.reviews);
 
   return (
     <div className="max-w-[1400px] mx-5 md:mx-auto my-10 ">
@@ -118,14 +119,14 @@ export default function ProductDetails() {
 
           <div className="my-5">
             <div>
-              {product.product.category.map((category, index) => (
+              {product?.product?.category.map((category, index) => (
                 <CategoryBox category={category} key={index} />
               ))}
             </div>
           </div>
           <div className="my-5">
             <div>
-              {product.product.colors.map((color, index) => (
+              {product?.product?.colors.map((color, index) => (
                 <Color color={color} key={index} />
               ))}
             </div>
