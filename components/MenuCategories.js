@@ -6,6 +6,7 @@ export default function MenuCategories() {
   const dispatch = useDispatch();
 
   const categories = [
+    { id: 0, name: "ALL", value: "All" },
     { id: 1, name: "Shoes", value: "Shoes" },
     { id: 2, name: "Accessories", value: "Accessories" },
     { id: 3, name: "Jackets", value: "Jacket" },
@@ -13,7 +14,8 @@ export default function MenuCategories() {
     { id: 5, name: "Pants", value: "Pants" },
   ];
 
-  const [value, setValue] = useState("Shirt");
+  const [value, setValue] = useState("Select A Category");
+
   return (
     <select
       value={value ? value : "Select a Category"}

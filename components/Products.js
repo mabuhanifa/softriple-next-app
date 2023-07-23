@@ -4,14 +4,28 @@ import Product from "./Product";
 export default function Products() {
   const { products, filter } = useSelector((state) => state.products);
   const findAvg = (arr) => arr.reduce((a, b) => b.rating + a, 0) / arr.length;
+
+  const filterByRegex = (products, filter) => {
+    const regex = new RegExp(filter, "i");
+
+    return products.filter(
+      (product) =>
+        regex.test(product.product.category.join(" ").toLowerCase()) ||
+        regex.test(product.product.colors.join(" ").toLowerCase()) ||
+        regex.test(product.product.name.toLowerCase()) ||
+        regex.test(product.product.description.toLowerCase())
+    );
+  };
+
   const topProducts = products
     .slice()
     .sort((a, b) => {
       return findAvg(b.reviews) - findAvg(a.reviews);
     })
     .filter((product) =>
-      filter ? product.product.category.includes(filter) : product
+      filter ? filterByRegex([product], filter).length > 0 : true
     );
+    
   return (
     <div className="my-10">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 place-items-center px-10">

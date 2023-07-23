@@ -1,3 +1,4 @@
+import { setFilter } from "@/redux/slices/productsSlice";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -6,13 +7,13 @@ import { BiMenuAltRight, BiUser } from "react-icons/bi";
 import { CiSearch } from "react-icons/ci";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { VscChromeClose } from "react-icons/vsc";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import MenuCategories from "./MenuCategories";
 
 export default function NavBar() {
   const { cart, wishList } = useSelector((state) => state.products);
   const [mobileMenu, setMobileMenu] = useState(false);
-
+  const dispatch = useDispatch();
   return (
     <nav className="border-b py-5">
       <div
@@ -38,6 +39,7 @@ export default function NavBar() {
             type="text"
             className="pl-10 py-2 rounded border border-black/10 text-base"
             placeholder="Search"
+            onChange={(e) => dispatch(setFilter(e.target.value))}
           />
           <span className="absolute left-2 text-2xl text-black/50">
             <CiSearch />
