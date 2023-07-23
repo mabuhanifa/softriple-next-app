@@ -219,7 +219,7 @@ export default function ProductDetails() {
                 className="my-5 p-2 border border-gray-500"
                 onChange={(e) => setRating(e.target.value)}
               >
-                {reviews.map((review, index) => (
+                {reviews?.map((review, index) => (
                   <option key={index} value={review?.values}>
                     {review?.name}
                   </option>
