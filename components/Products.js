@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 import Product from "./Product";
 
 export default function Products() {
-  
   const { products, filter } = useSelector((state) => state.products);
 
   const findAvg = (arr) => arr.reduce((a, b) => b.rating + a, 0) / arr.length;
@@ -27,9 +26,16 @@ export default function Products() {
     .filter((product) =>
       filter ? filterByRegex([product], filter).length > 0 : true
     );
-    
+
   return (
     <div className="my-10">
+      {filter ? (
+        <h1 className="text-2xl font-bold text-center my-5">
+          {topProducts.length} Products found
+        </h1>
+      ) : (
+        <h1 className="text-2xl font-bold text-center my-5">ALL Products</h1>
+      )}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 place-items-center px-10">
         {topProducts &&
           topProducts.map((product) => (
