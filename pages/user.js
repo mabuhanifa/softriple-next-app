@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useSelector } from "react-redux";
 
 export default function User() {
@@ -7,8 +8,20 @@ export default function User() {
       <h1 className="text-2xl font-bold text-center">User Page</h1>
 
       <div className="flex justify-center items-center my-10">
-        <h2 className="text-xl font-bold text-center">User Name</h2>
-        <span className="text-xl font-bold text-center ml-5 text-gray-500">{" " + user ? user : "No User"}</span>
+        {user ? (
+          <>
+            <h2 className="text-xl font-bold text-center">Logged User</h2>
+            <span className="text-xl font-bold text-center ml-5 text-gray-500">
+              {" " + user ? user : "No User"}
+            </span>
+          </>
+        ) : (
+          <p>
+            <span className="text-green-500 font-semibold mx-5 text-lg">
+              <Link href={"/login"}>Login</Link>
+            </span>
+          </p>
+        )}
       </div>
     </div>
   );
