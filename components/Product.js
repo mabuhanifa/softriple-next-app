@@ -113,7 +113,7 @@ export default function Product({ product }) {
                      py-2.5 px-4 active:scale-95 rounded-md text-xs"
             onClick={() => {
               dispatch(removeFromWishList(product.id));
-              toast.success("Product Removed from Cart");
+              toast.success("Product Removed from WishList");
             }}
           >
             <VscTrash size={20} />
@@ -125,7 +125,7 @@ export default function Product({ product }) {
             className="flex items-center gap-x-3 border border-gray-300 text-gray-700 
                        py-2.5 px-4 active:scale-95 rounded-md group hover:border-gray-400"
             onClick={() => {
-              dispatch(addToWishList(product));
+              dispatch(addToWishList({ ...product, quantity: 1 }));
               toast.success("Product Added To Wishlist");
             }}
           >

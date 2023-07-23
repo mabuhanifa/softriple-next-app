@@ -10,7 +10,7 @@ export default function Cart() {
     0
   );
   return (
-    <div className="max-w-[1400px] mx-auto">
+    <div className="max-w-[1400px] mx-auto min-h-[80vh]">
       <h1 className="text-3xl font-bold text-gray-700 text-center mt-20">
         Shopping Cart
       </h1>

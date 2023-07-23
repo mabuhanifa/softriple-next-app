@@ -7,7 +7,7 @@ import Image from "next/image";
 import { VscTrash } from "react-icons/vsc";
 import { useDispatch } from "react-redux";
 
-export default function CartItem({ item }) {
+export default function WishItem({ item }) {
   const dispatch = useDispatch();
 
   return (

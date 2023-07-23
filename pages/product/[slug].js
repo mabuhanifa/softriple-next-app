@@ -108,7 +108,9 @@ export default function ProductDetails() {
           ) : (
             <button
               className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10"
-              onClick={() => dispatch(addToWishList(selectedProduct))}
+              onClick={() =>
+                dispatch(addToWishList({ ...selectedProduct, quantity: 1 }))
+              }
             >
               Whishlist
               <IoMdHeartEmpty size={20} />
