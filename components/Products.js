@@ -2,11 +2,16 @@ import { useSelector } from "react-redux";
 import Product from "./Product";
 
 export default function Products() {
-  const { products } = useSelector((state) => state.products);
+  const { products, filter } = useSelector((state) => state.products);
   const findAvg = (arr) => arr.reduce((a, b) => b.rating + a, 0) / arr.length;
-  const topProducts = products.slice().sort((a, b) => {
-    return findAvg(b.reviews) - findAvg(a.reviews);
-  });
+  const topProducts = products
+    .slice()
+    .sort((a, b) => {
+      return findAvg(b.reviews) - findAvg(a.reviews);
+    })
+    .filter((product) =>
+      filter ? product.product.category.includes(filter) : product
+    );
   return (
     <div className="my-10">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 place-items-center px-10">
