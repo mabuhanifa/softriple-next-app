@@ -3,18 +3,18 @@ import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BiMenuAltRight, BiUser } from "react-icons/bi";
-import { BsChevronDown } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { VscChromeClose } from "react-icons/vsc";
 import { useSelector } from "react-redux";
+import MenuCategories from "./MenuCategories";
 
 export default function NavBar() {
   const { cart, wishList } = useSelector((state) => state.products);
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
-    <nav className="border-b py-5 ">
+    <nav className="border-b py-5">
       <div
         className="flex justify-between items-center text-black/75 font-[500] 
                 xl:px-60 px-10 text-lg"
@@ -30,11 +30,8 @@ export default function NavBar() {
             />
           </Link>
         </div>
-        <div className="md:flex items-center gap-x-3 hidden">
-          <h1>Category</h1>
-          <span className="mt-1">
-            <BsChevronDown />
-          </span>
+        <div className="hidden md:flex">
+          <MenuCategories />
         </div>
         <div className="relative md:flex items-center hidden">
           <input
@@ -93,6 +90,23 @@ export default function NavBar() {
           </div>
         </div>
       </div>
+      {mobileMenu && (
+        <div className="m-5 flex flex-col md:hidden justify-center items-center">
+          <div className="relative flex items-center">
+            <input
+              type="text"
+              className="pl-10 py-2 rounded border border-black/10 text-base"
+              placeholder="Search"
+            />
+            <span className="absolute left-2 text-2xl text-black/50">
+              <CiSearch />
+            </span>
+          </div>
+          <div className="mt-5">
+            <MenuCategories />
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
