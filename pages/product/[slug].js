@@ -13,6 +13,28 @@ import { VscTrash } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function ProductDetails() {
+  const reviews = [
+    {
+      name: "1 - poor",
+      values: 1,
+    },
+    {
+      name: "2 - fair",
+      values: 2,
+    },
+    {
+      name: "3 - good",
+      values: 3,
+    },
+    {
+      name: "4 - very good",
+      values: 4,
+    },
+    {
+      name: "5 - excellent",
+      values: 5,
+    },
+  ];
   const { query } = useRouter();
   const { products, cart, wishList } = useSelector((state) => state.products);
   const product = products.find((item) => item.id === query.slug);
@@ -27,7 +49,8 @@ export default function ProductDetails() {
     ...product,
     selectedSize: product?.product?.sizes[0],
   });
-  const findAvg = (arr) => arr?.reduce((a, b) => b?.rating + a, 0) / arr?.length;
+  const findAvg = (arr) =>
+    arr?.reduce((a, b) => b?.rating + a, 0) / arr?.length;
 
   const star = findAvg(product?.reviews);
 
@@ -128,7 +151,7 @@ export default function ProductDetails() {
           </div>
         </div>
       </div>
-      <div className="my-20 flex justify-between">
+      <div className="my-20 md:flex justify-between">
         <div>
           <h2 className="text-xl font-[500] ">Reviews By Users</h2>
           <div className="flex flex-col items-center gap-2 my-5 p-3 border">
@@ -150,7 +173,26 @@ export default function ProductDetails() {
           </div>
         </div>
         <div>
-          <h2 className="text-xl font-[500] ">Post Your Review</h2>
+          <h2 className="text-xl font-[500] my-3">Post Your Review</h2>
+          <div>
+            <input
+              type="text"
+              placeholder="Add your comment"
+              className="bg-gray-300 px-3 py-2"
+            />
+            <br />
+            <select name="" id="" className="my-5 p-2 border border-gray-500">
+              {reviews.map((review, index) => (
+                <option key={index} value={review?.values}>
+                  {review?.name}
+                </option>
+              ))}
+            </select>
+            <br />
+            <button className="bg-black text-white py-2 px-5 rounded-full mt-3">
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     </div>

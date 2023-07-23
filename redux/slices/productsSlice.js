@@ -51,6 +51,11 @@ const productsSlice = createSlice({
     logUser: (state, action) => {
       state.user = action.payload;
     },
+    
+    addReview: (state, action) => {
+      const item = state.products.find((item) => item.id === action.payload.id);
+      item.reviews = [...item.reviews, action.payload.review];
+    },
   },
 });
 
@@ -65,4 +70,5 @@ export const {
   decreaseQuantity,
   setFilter,
   logUser,
+  addReview,
 } = productsSlice.actions;
