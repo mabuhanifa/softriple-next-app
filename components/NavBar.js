@@ -99,6 +99,7 @@ export default function NavBar() {
               type="text"
               className="pl-10 py-2 rounded border border-black/10 text-base"
               placeholder="Search"
+              onChange={(e) => dispatch(setFilter(e.target.value))}
             />
             <span className="absolute left-2 text-2xl text-black/50">
               <CiSearch />

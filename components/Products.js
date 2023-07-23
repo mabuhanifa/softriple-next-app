@@ -2,7 +2,9 @@ import { useSelector } from "react-redux";
 import Product from "./Product";
 
 export default function Products() {
+  
   const { products, filter } = useSelector((state) => state.products);
+
   const findAvg = (arr) => arr.reduce((a, b) => b.rating + a, 0) / arr.length;
 
   const filterByRegex = (products, filter) => {
