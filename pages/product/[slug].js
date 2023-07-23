@@ -1,3 +1,5 @@
+import CategoryBox from "@/components/CategoryBox";
+import Color from "@/components/Color";
 import ProductCarousel from "@/components/ProductCarousel";
 import Star from "@/components/Star";
 import {
@@ -59,6 +61,10 @@ export default function ProductDetails() {
     selectedSize: product?.product?.sizes[0],
   });
 
+  const findAvg = (arr) => arr.reduce((a, b) => b.rating + a, 0) / arr.length;
+
+  const star = findAvg(product.reviews);
+
   return (
     <div className="max-w-[1400px] mx-5 md:mx-auto my-10 ">
       <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
@@ -110,6 +116,24 @@ export default function ProductDetails() {
             </div>
           </div>
 
+          <div className="my-5">
+            <div>
+              {product.product.category.map((category, index) => (
+                <CategoryBox category={category} key={index} />
+              ))}
+            </div>
+          </div>
+          <div className="my-5">
+            <div>
+              {product.product.colors.map((color, index) => (
+                <Color color={color} key={index} />
+              ))}
+            </div>
+          </div>
+          <div className="flex items-center my-5">
+            {star &&
+              [...Array(1).keys()].map((_, i) => <Star star={star} key={i} />)}
+          </div>
           {inCart ? (
             <button
               className="w-full py-4 rounded-full bg-red-600 text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
