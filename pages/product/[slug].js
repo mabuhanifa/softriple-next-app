@@ -1,4 +1,5 @@
 import ProductCarousel from "@/components/ProductCarousel";
+import Star from "@/components/Star";
 import {
   addToCart,
   addToWishList,
@@ -26,7 +27,9 @@ export default function ProductDetails() {
     ...product,
     selectedSize: product?.product?.sizes[0],
   });
-  console.log(selectedProduct);
+  const findAvg = (arr) => arr?.reduce((a, b) => b?.rating + a, 0) / arr?.length;
+
+  const star = findAvg(product?.reviews);
 
   return (
     <div className="max-w-[1400px] mx-5 md:mx-auto my-10 ">
@@ -123,6 +126,31 @@ export default function ProductDetails() {
               <p>{product?.product?.description}</p>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="my-20 flex justify-between">
+        <div>
+          <h2 className="text-xl font-[500] ">Reviews By Users</h2>
+          <div className="flex flex-col items-center gap-2 my-5 p-3 border">
+            {product?.reviews.map((review, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center gap-2 my-5 p-3 border"
+              >
+                <h4 className="text-lg font-semibold">{review?.username}</h4>
+                <div className="flex items-center">
+                  {star &&
+                    [...Array(1).keys()].map((_, i) => (
+                      <Star star={star} key={i} />
+                    ))}
+                </div>
+                <p>{review?.comment}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h2 className="text-xl font-[500] ">Post Your Review</h2>
         </div>
       </div>
     </div>

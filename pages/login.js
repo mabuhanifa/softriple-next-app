@@ -1,8 +1,19 @@
-export default function Login() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
+import { logUser } from "@/redux/slices/productsSlice";
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
 
-    console.log(e.target.name.value);
+/* eslint-disable @next/next/no-img-element */
+export default function Login() {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const handleSubmit = (e) => {
+    if (e.target.name.value === "") {
+      alert("Please enter your name");
+      return;
+    }
+    e.preventDefault();
+    dispatch(logUser(e.target.name.value));
+    router.push("/");
   };
   return (
     <div className="max-w-[1400px] mx-auto min-h-[80vh]">

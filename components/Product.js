@@ -137,6 +137,7 @@ export default function Product({ product }) {
           </button>
         )}
       </div>
+      
     </div>
   );
 }
